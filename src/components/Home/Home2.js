@@ -16,7 +16,7 @@ function Home2() {
         <Row>
           <Col md={8} className="home-about-description">
             <h1 style={{ fontSize: "2.6em" }}>
-              LET ME <span className="purple"> INTRODUCE </span> MYSELF
+              ALLOW ME TO<span className="purple"> INTRODUCE </span> MYSELF
             </h1>
             <p className="home-about-body">
               I build enterprise resource systems!
@@ -29,10 +29,10 @@ function Home2() {
               <br />
               My field of Interest's are building new &nbsp;
               <i>
-                <b className="purple">Web Technologies and Products </b> and
+                <b className="purple">Enterprise Applications </b> and
                 also in areas related to{" "}
                 <b className="purple">
-                  Blockchain.
+                  Engineering.
                 </b>
               </i>
               <br />
