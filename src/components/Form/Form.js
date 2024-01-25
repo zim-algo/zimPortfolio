@@ -41,7 +41,7 @@ const ContactForm = () => {
     }
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
 
     // Perform form-level validation
@@ -51,6 +51,32 @@ const ContactForm = () => {
     if (isFormValid) {
       // Form is valid, proceed with form submission or other actions
       console.log('Form submitted:', formData);
+
+      try {
+        // Make your API call using data
+        const response = await fetch(
+          "https://5klmh3sp4a.execute-api.us-east-2.amazonaws.com/v1",
+          {
+            method: "POST",
+            headers: {
+              "Content-Type": "application/json",
+            },
+            body: JSON.stringify(formData),
+          }
+        );
+  
+        if (response.ok) {
+          // Handle successful API response, e.g., show success message
+          console.log("API call successful");
+        } else {
+          // Handle API error, e.g., show error message
+          console.error("API call failed");
+        }
+      } catch (error) {
+        console.error("API call error:", error);
+      }
+
+
     } else {
       console.log('Form validation failed');
     }
