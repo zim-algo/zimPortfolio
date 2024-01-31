@@ -1,6 +1,9 @@
 import React, { useState } from 'react';
+import "./form.css";
+
 
 const ContactForm = () => {
+  const api = "https://ehdbk67h5i.execute-api.us-east-1.amazonaws.com/V1";
   const [formData, setFormData] = useState({
     email: '',
     title: '',
@@ -12,6 +15,9 @@ const ContactForm = () => {
   const [formErrors, setFormErrors] = useState({
     email: '',
     phoneNumber: '',
+    title: '',
+    name:'',
+    message:''
   });
 
   const validateEmail = (email) => {
@@ -26,6 +32,25 @@ const ContactForm = () => {
     return phoneRegex.test(phoneNumber);
   };
 
+  const validateMessage = (message)=>{
+    return message.trim().length>0;
+  }
+  const validateTitle = (message)=>{
+    return message.trim().length>0;
+  }
+  const validateName = (message)=>{
+    return message.trim().length>0;
+  }
+
+  let clearFormData = ()=>{
+    setFormData({
+      email: '',
+      phoneNumber: '',
+      title: '',
+      name:'',
+      message:''
+    })};
+
   const handleInputChange = (e) => {
     const { name, value } = e.target;
     setFormData({ ...formData, [name]: value });
@@ -39,6 +64,24 @@ const ContactForm = () => {
         phoneNumber: validatePhoneNumber(value) ? '' : 'Invalid phone number',
       });
     }
+    else if(name === 'title'){
+      setFormErrors({
+        ...formErrors,
+        title: validateTitle(value) ? '' : 'Invalid Title',
+      });
+    }
+    else if(name === 'name'){
+      setFormErrors({
+        ...formErrors,
+        name: validateName(value) ? '' : 'Invalid Name',
+      });
+    }
+    else if(name === 'message'){
+      setFormErrors({
+        ...formErrors,
+        message: validateMessage(value) ? '' : 'Invalid Message ',
+      });
+    }
   };
 
   const handleSubmit = async (e) => {
@@ -46,7 +89,7 @@ const ContactForm = () => {
 
     // Perform form-level validation
     const isFormValid =
-      validateEmail(formData.email) && validatePhoneNumber(formData.phoneNumber);
+      validateEmail(formData.email) && validatePhoneNumber(formData.phoneNumber) && validateName(formData.name) && validateMessage(formData.message) && validateTitle(formData.title);
 
     if (isFormValid) {
       // Form is valid, proceed with form submission or other actions
@@ -55,7 +98,7 @@ const ContactForm = () => {
       try {
         // Make your API call using data
         const response = await fetch(
-          "https://5klmh3sp4a.execute-api.us-east-2.amazonaws.com/v1",
+          api,
           {
             method: "POST",
             headers: {
@@ -68,6 +111,7 @@ const ContactForm = () => {
         if (response.ok) {
           // Handle successful API response, e.g., show success message
           console.log("API call successful");
+          clearFormData();
         } else {
           // Handle API error, e.g., show error message
           console.error("API call failed");
@@ -83,7 +127,10 @@ const ContactForm = () => {
   };
 
   return (
+    
     <form onSubmit={handleSubmit} style={formStyles}>
+      <h3>Please leave me a message and I will get back as soon as possible.</h3>
+      <h3>Thank you!</h3><br></br>
       <div style={inputContainer}>
         <label htmlFor="email" style={labelStyle}>
           Email:
@@ -113,6 +160,7 @@ const ContactForm = () => {
           required
           style={inputStyle}
         />
+        {formErrors.title && <p style={errorStyle}>{formErrors.title}</p>}
       </div>
 
       <div style={inputContainer}>
@@ -128,6 +176,7 @@ const ContactForm = () => {
           required
           style={inputStyle}
         />
+        {formErrors.name && <p style={errorStyle}>{formErrors.name}</p>}
       </div>
 
       <div style={inputContainer}>
@@ -157,6 +206,7 @@ const ContactForm = () => {
           required
           style={{ ...inputStyle, height: '100px' }}
         />
+        {formErrors.message && <p style={errorStyle}>{formErrors.message}</p>}
       </div>
 
       <button type="submit" style={submitButtonStyle}>
