@@ -25,10 +25,10 @@ function Projects() {
             <ProjectCard
               imgPath={chatify}
               isBlog={false}
-              title="Chatify"
-              description="Personal Chat Room or Workspace to share resources and hangout with friends build with react.js, Material-UI, and Firebase. Have features which allows user for realtime messaging, image sharing as well as supports reactions on messages."
-              ghLink="https://github.com/soumyajit4419/Chatify"
-              demoLink="https://chatify-49.web.app/"
+              title="Todo List"
+              description="A sophisticated to-do list application was crafted, employing a microservices architecture with containerized services managed by Kubernetes, ensuring high availability and scalability. The backend, powered by Node.js and Express, interfaced with a distributed MongoDB cluster for data persistence, while the frontend featured a sleek, reactive UI built with Vue.js, enriched with real-time updates using WebSocket. Advanced features included AI-based task prioritization and natural language processing for task input, all secured with OAuth 2.0 for robust user authentication and authorization. This high-tech stack transformed the simple concept of task management into a cutting-edge productivity tool."
+              // ghLink=""
+              // demoLink=""
             />
           </Col>
 
@@ -36,10 +36,10 @@ function Projects() {
             <ProjectCard
               imgPath={bitsOfCode}
               isBlog={false}
-              title="Bits-0f-C0de"
-              description="My personal blog page build with Next.js and Tailwind Css which takes the content from makdown files and renders it using Next.js. Supports dark mode and easy to write blogs using markdown."
-              ghLink="https://github.com/soumyajit4419/Bits-0f-C0de"
-              demoLink="https://blogs.soumya-jit.tech/"
+              title="SCADA system"
+              description="A SCADA system for a power plant was architected with Java on the backend, effectively integrating multiple control systems to monitor and manage plant operations. This backend was responsible for aggregating data streams, automating control processes, and facilitating predictive maintenance. The system also served as the central hub for operational insights, enabling comprehensive monitoring and control over the plant's various subsystems, thereby optimizing performance and reliability."
+              // ghLink=""
+              // demoLink=""
             />
           </Col>
 
@@ -47,10 +47,10 @@ function Projects() {
             <ProjectCard
               imgPath={editor}
               isBlog={false}
-              title="Editor.io"
-              description="Online code and markdown editor build with react.js. Online Editor which supports html, css, and js code with instant view of website. Online markdown editor for building README file which supports GFM, Custom Html tags with toolbar and instant preview.Both the editor supports auto save of work using Local Storage"
-              ghLink="https://github.com/soumyajit4419/Editor.io"
-              demoLink="https://editor.soumya-jit.tech/"              
+              title="Inventory Management System"
+              description="An inventory management system for a power plant was developed with a secure Java backend utilizing Spring Security for OAuth authentication and authorization. The React-powered frontend provided an intuitive interface for real-time tracking of spare parts and featured automated reordering based on predefined thresholds. Integration with a payment gateway enabled direct purchasing within the system, streamlining the procurement process. This comprehensive system ensured operational efficiency and minimized downtime by maintaining optimal inventory levels through intelligent automation."
+              // ghLink=""
+              // demoLink=""              
             />
           </Col>
 
@@ -58,10 +58,10 @@ function Projects() {
             <ProjectCard
               imgPath={leaf}
               isBlog={false}
-              title="Plant AI"
-              description="Used the plant disease dataset from Kaggle and trained a image classifer model using 'PyTorch' framework using CNN and Transfer Learning with 38 classes of various plant leaves. The model was successfully able to detect diseased and healthy leaves of 14 unique plants. I was able to achieve an accuracy of 98% by using Resnet34 pretrained model."
-              ghLink="https://github.com/soumyajit4419/Plant_AI"
-              demoLink="https://plant49-ai.herokuapp.com/"
+              title="Library Management System"
+              description="A library management system architected with Java handles backend logic, utilizing frameworks like Spring for robust API development and Hibernate for ORM, interfacing with a relational database such as MySQL for cataloging and user account management. The frontend, built with JavaScript, HTML, and CSS, provides a user-friendly interface for patrons to search, reserve, and manage books, while AJAX calls to Java servlets ensure a smooth and responsive user experience. This system streamlines the overall process of library operations, from inventory management to the user borrowing lifecycle."
+              // ghLink=""
+              // demoLink=""
             />
           </Col>
 
@@ -69,10 +69,10 @@ function Projects() {
             <ProjectCard
               imgPath={suicide}
               isBlog={false}
-              title="Ai For Social Good"
-              description="Using 'Natural Launguage Processing' for the detection of suicide-related posts and user's suicide ideation in cyberspace  and thus helping in sucide prevention."
-              ghLink="https://github.com/soumyajit4419/AI_For_Social_Good"
-              // demoLink="https://www.youtube.com/watch?v=dQw4w9WgXcQ&ab_channel=RickAstley" <--------Please include a demo link here
+              title="Alumni Management Portal"
+              description="The alumni management portal integrates Java's Spring Boot with Spring MVC for backend operations, with ReactJS energizing the frontend, ensuring a seamless, full-stack user experience. For persistent data storage and efficient retrieval, it employs relational databases like PostgreSQL or MySQL for structured data and alumni records, alongside NoSQL options like MongoDB for flexible data handling, such as event logs or unstructured alumni interactions."
+              // ghLink=""
+              // demoLink="" <--------Please include a demo link here
             />
           </Col>
 
@@ -80,11 +80,10 @@ function Projects() {
             <ProjectCard
               imgPath={emotion}
               isBlog={false}
-              title="Face Recognition and Emotion Detection"
-              description="Trained a CNN classifier using 'FER-2013 dataset' with Keras and tensorflow backened. The classifier sucessfully predicted the various types of emotions of human. And the highest accuracy obtained with the model was 60.1%.
-              Then used Open-CV to detect the face in an image and then pass the face to the classifer to predict the emotion of a person."
-              ghLink="https://github.com/soumyajit4419/Face_And_Emotion_Detection"
-              // demoLink="https://blogs.soumya-jit.tech/"      <--------Please include a demo link here 
+              title="Shopping Cart Project"
+              description="A Node.js and Express backend powers the shopping cart project, providing RESTful API endpoints for cart operations like addition, deletion, and updating of items. The frontend, crafted with HTML, CSS, and vanilla JavaScript, offers a responsive and interactive user interface, allowing seamless user experiences across various devices. Persistent storage is managed with a database like MongoDB, ensuring data integrity and state management across sessions."
+              // ghLink=""
+              // demoLink=""      <--------Please include a demo link here 
             />
           </Col>
         </Row>
